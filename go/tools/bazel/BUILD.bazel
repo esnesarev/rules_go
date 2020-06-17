@@ -6,7 +6,7 @@ go_library(
         "bazel.go",
         "runfiles.go",
     ],
-    importpath = "github.com/bazelbuild/rules_go/go/tools/bazel",
+    importpath = "github.com/esnesarev/rules_go/go/tools/bazel",
     visibility = ["//visibility:public"],
 )
 

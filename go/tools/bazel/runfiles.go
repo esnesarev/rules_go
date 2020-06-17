@@ -330,6 +330,9 @@ func initRunfiles() {
 				continue
 			}
 			e := bytes.SplitN(line, []byte(" "), 2)
+			if len(e) == 1 {
+				e = append(e, e[0])
+			}
 			if len(e) < 2 {
 				runfiles.err = fmt.Errorf("error parsing runfiles manifest: %s:%d: no space", manifest, lineno)
 				return
